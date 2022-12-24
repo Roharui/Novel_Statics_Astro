@@ -1,25 +1,11 @@
 ---
 import "../styles/global.css";
 
-interface NovelStatistics {
-  novel: Novel;
-}
+import type { NovelStatistics } from "../interfaces/novel.type";
+import { ErrorToast } from "../components/ErrorToast";
+import { ResultPage } from "../components/searchResult";
 
-interface Novel {
-  created_at: string;
-  updated_at: string;
-  title: string;
-  type: string;
-  thumbnail: string;
-  link: string;
-  is_end: boolean;
-  is_plus: boolean;
-  age_limit: number;
-  author: string;
-  description: string;
-}
-
-const { data } = Astro.props;
+const { data, err, errText } = Astro.props;
 ---
 
 <html lang="en">
@@ -31,6 +17,14 @@ const { data } = Astro.props;
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
-    <img src={(data as NovelStatistics).novel.thumbnail} />
+    <div class="box">
+      {
+        err ? (
+          <ErrorToast client:load errText={errText} />
+        ) : (
+          <ResultPage client:load data={data} />
+        )
+      }
+    </div>
   </body>
 </html>

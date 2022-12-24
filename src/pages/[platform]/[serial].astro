@@ -8,16 +8,29 @@ const platforms = {
 
 const { platform = "", serial = "" } = Astro.params;
 
-if (!Object.keys(platforms).includes(platform)) {
-  return Astro.redirect("/");
-}
+let err = false;
+let errText = "";
+let data = null;
 
-const response = await fetch(
-  `${import.meta.env.BACKEND_API}/n?url=${(platforms as Record<string, any>)[
-    platform
-  ](serial)}`
-);
-const data = await response.json();
+if (!Object.keys(platforms).includes(platform) || isNaN(parseInt(serial))) {
+  err = true;
+  errText = "잘못된 링크가 입력되었습니다.";
+} else {
+  const url = (platforms as Record<string, any>)[platform](serial);
+  try {
+    const response = await fetch(`${import.meta.env.BACKEND_API}/n?url=${url}`);
+
+    if (response.status === 400) {
+      err = true;
+      errText = "해당 소설은 등록되지 않았습니다.";
+    }
+
+    data = await response.json();
+  } catch (e) {
+    err = true;
+    errText = "서버와의 연결이 불안정합니다.";
+  }
+}
 ---
 
-<ResultLayout data={data} />
+<ResultLayout data={data} err={err} errText={errText} />

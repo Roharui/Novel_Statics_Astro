@@ -1,0 +1,257 @@
+div {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-self: stretch;
+  align-items: stretch;
+  flex-grow: 0;
+}
+
+span {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.rate-title > span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.title-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #000;
+}
+
+.content {
+  flex-grow: 1;
+  gap: 10px;
+  padding: 10px;
+}
+
+.summary {
+  width: 30%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 3;
+  gap: 10px;
+  padding: 10px;
+}
+
+.novel-summary {
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0;
+}
+
+.thumbnail {
+  height: 300px;
+}
+
+.title-type {
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.artist-tags {
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.artist-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+}
+
+.title {
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.ex-tag {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.plus-tag {
+  align-items: flex-start;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #ab00d6;
+}
+
+.age-tag-15 {
+  align-items: flex-start;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #0015d6;
+}
+
+.age-tag-19 {
+  align-items: flex-start;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #ff0000;
+}
+
+.end-tag {
+  align-items: flex-start;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #616161;
+}
+
+.description {
+  overflow-y: scroll;
+  white-space: pre-wrap;
+  word-break: break-all;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+.renewal-date {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.novel-statics {
+  width: 60%;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.novel-statics-summary {
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d2d2d2;
+}
+
+.rate-title {
+  height: 26px;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.calc-info {
+  height: 26px;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px 3px;
+}
+
+.summary-rate {
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0;
+  background-color: #fff;
+}
+
+.summary-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.cur-percentage {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.rate-summary {
+  height: 100%;
+  align-self: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.summary-info {
+  font-size: 48px;
+}
+
+.ex-info {
+  font-size: 32px;
+}
+
+.novel-summary-info {
+  width: 50%;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d4d4d4;
+}
+
+.novel-info {
+  max-height: 300px;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #d4d4d4;
+}
+
+.total-avg {
+  width: 50%;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d4d4d4;
+}
+
+.platform-avg {
+  width: 50%;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d4d4d4;
+}
+
+.avg-info {
+  width: 50%;
+  flex-grow: 1;
+  gap: 10px;
+  padding: 0;
+}
+
+.logo > a > img {
+  width: 50px;
+  height: 50px;
+  flex-grow: 0;
+}
