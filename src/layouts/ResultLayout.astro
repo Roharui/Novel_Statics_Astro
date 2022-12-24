@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+
+interface NovelStatics {
+  novel: Novel;
+}
+
+interface Novel {
+  created_at: string;
+  updated_at: string;
+  title: string;
+  type: string;
+  thumbnail: string;
+  link: string;
+  is_end: boolean;
+  is_plus: boolean;
+  age_limit: number;
+  author: string;
+  description: string;
+}
+
+const { data } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NovelStatic</title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  </head>
+  <body>
+    <img src={(data as NovelStatics).novel.thumbnail} />
+  </body>
+</html>

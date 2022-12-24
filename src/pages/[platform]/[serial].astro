@@ -1,0 +1,23 @@
+---
+import ResultLayout from "../../layouts/ResultLayout.astro";
+
+const platforms = {
+  novelpia: (serial: string) => `https://novelpia.com/novel/${serial}`,
+  munpia: (serial: string) => `https://novel.munpia.com/${serial}`,
+};
+
+const { platform = "", serial = "" } = Astro.params;
+
+if (!Object.keys(platforms).includes(platform)) {
+  return Astro.redirect("/");
+}
+
+const response = await fetch(
+  `${import.meta.env.BACKEND_API}/n?url=${(platforms as Record<string, any>)[
+    platform
+  ](serial)}`
+);
+const data = await response.json();
+---
+
+<ResultLayout data={data} />
