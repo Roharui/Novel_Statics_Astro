@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-interface NovelStatics {
+interface NovelStatistics {
   novel: Novel;
 }
 
@@ -31,6 +31,6 @@ const { data } = Astro.props;
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
   </head>
   <body>
-    <img src={(data as NovelStatics).novel.thumbnail} />
+    <img src={(data as NovelStatistics).novel.thumbnail} />
   </body>
 </html>
