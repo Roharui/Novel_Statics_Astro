@@ -1,0 +1,90 @@
+---
+---
+
+<div class="platforms">
+  <span class="name">통계 대상 플랫폼</span>
+  <div class="logo-wrapper">
+    <img src="/assets/munpia.png" id="munpia" />
+    <img src="/assets/novelpia.png" id="novelpia" />
+  </div>
+  <div class="info-wrapper">
+    <span class="info">유료화한 소설들만 통계 대상에 포함됩니다.</span>
+  </div>
+</div>
+
+<style>
+  .name {
+    flex-grow: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+  #munpia {
+    width: 110px;
+    height: 110px;
+    flex-grow: 0;
+  }
+
+  #novelpia {
+    width: 100px;
+    height: 100px;
+    flex-grow: 0;
+  }
+
+  .info-wrapper {
+    width: 100%;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info {
+    height: 19px;
+    flex-grow: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+  .logo-wrapper {
+    height: 140px;
+    align-self: stretch;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: dashed 3px #000;
+  }
+
+  .platforms {
+    width: 288px;
+    height: 203px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+  }
+</style>

@@ -1,2 +1,24 @@
 ---
+import "../styles/global.css";
+
+import Platforms from "../components/Platforms.astro";
+import SearchLogo from "../components/SearchLogo.astro";
+import Github from "../components/Github.astro";
 ---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>NovelStatic</title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  </head>
+  <body>
+    <div class="box">
+      <SearchLogo />
+    </div>
+    <Platforms />
+    <Github />
+  </body>
+</html>
