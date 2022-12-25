@@ -4,6 +4,8 @@ export interface NovelStatistics {
   view_avg: Rate;
   reading_rate: Rate;
   upload_rate: Rate;
+  episode: Episode[];
+  growth: Growth[];
 }
 
 export interface Novel {
@@ -22,7 +24,24 @@ export interface Novel {
 
 export interface Rate {
   avg: number;
-  content_avg: number;
+  pavg: number;
   cur: number;
   percentage: number;
+}
+
+export interface Episode {
+  idx: number;
+  title: string;
+  word_size: string;
+  view: number;
+  good: number;
+  comment: number;
+  date: string;
+}
+
+export interface Growth {
+  created_at: string;
+  view: number;
+  good: number;
+  book: number;
 }

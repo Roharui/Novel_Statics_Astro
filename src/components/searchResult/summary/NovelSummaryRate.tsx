@@ -44,7 +44,7 @@ export function SummaryRate({
           <div className="platform-avg">
             <span className="summary-title">{PLATFORM[platform]} 평균</span>
             <span className="summary-info ex-info">
-              {rate.content_avg}
+              {rate.pavg}
               {suffix}
             </span>
           </div>
